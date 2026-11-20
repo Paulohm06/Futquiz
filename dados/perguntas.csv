@@ -1,0 +1,86 @@
+nivel,categoria,enunciado,alternativa_a,alternativa_b,alternativa_c,alternativa_d,correta
+# ---------- Nivel 1: Muito facil (20) ----------
+1,INTERNACIONAL,Quantos jogadores cada time tem em campo no início de uma partida?,9,10,11,12,C
+1,COPA,Qual país tem mais títulos de Copa do Mundo?,Alemanha,Brasil,Itália,Argentina,B
+1,INTERNACIONAL,Quanto tempo dura uma partida oficial de futebol sem os acréscimos?,80 minutos,90 minutos,100 minutos,120 minutos,B
+1,INTERNACIONAL,Qual a cor do cartão que expulsa um jogador?,Amarelo,Azul,Verde,Vermelho,D
+1,BRASILEIRO,Qual jogador brasileiro é conhecido como o Rei do Futebol?,Pelé,Zico,Romário,Ronaldo,A
+1,BRASILEIRO,Em qual país fica o estádio do Maracanã?,Argentina,Uruguai,Brasil,Portugal,C
+1,COPA,Qual craque argentino levantou a taça da Copa do Mundo de 2022?,Di María,Messi,Agüero,Tevez,B
+1,COPA,Qual seleção venceu a Copa do Mundo de 2002?,Alemanha,França,Brasil,Itália,C
+1,INTERNACIONAL,Qual jogador português é conhecido pela sigla CR7?,Cristiano Ronaldo,Luís Figo,Eusébio,Deco,A
+1,LIBERTADORES,Qual é o principal torneio de clubes da América do Sul?,Champions League,Copa Libertadores,Copa América,Eurocopa,B
+1,BRASILEIRO,Qual é o apelido da Seleção Brasileira?,Celeste,Albiceleste,Canarinho,Azzurra,C
+1,INTERNACIONAL,O que acontece quando a bola cruza totalmente a linha entre as traves e sob o travessão?,Escanteio,Gol,Lateral,Tiro de meta,B
+1,INTERNACIONAL,Qual jogador pode pegar a bola com as mãos dentro da própria área?,Zagueiro,Lateral,Atacante,Goleiro,D
+1,INTERNACIONAL,Qual é o maior torneio de clubes da Europa?,Liga dos Campeões,Liga Europa,Copa do Rei,Supercopa,A
+1,COPA,De quantos em quantos anos acontece a Copa do Mundo masculina?,2 anos,3 anos,4 anos,5 anos,C
+1,BRASILEIRO,Qual clube paulista é conhecido como Timão?,Palmeiras,Corinthians,Santos,São Paulo,B
+1,BRASILEIRO,Qual clube carioca é apontado pelas pesquisas como dono da maior torcida do Brasil?,Flamengo,Vasco,Fluminense,Botafogo,A
+1,INTERNACIONAL,Como se chama a cobrança feita da marca a 11 metros do gol?,Falta,Pênalti,Lateral,Escanteio,B
+1,COPA,Qual país sediou a Copa do Mundo de 2014?,Brasil,África do Sul,Rússia,Alemanha,A
+1,INTERNACIONAL,Qual é a sigla do árbitro de vídeo usado no futebol?,GPS,VAR,DRS,TMO,B
+# ---------- Nivel 2: Facil (20) ----------
+2,COPA,Quem foi o artilheiro da Copa de 2002 com 8 gols?,Rivaldo,Ronaldo,Klose,Raúl,B
+2,COPA,Em que ano o Brasil conquistou seu primeiro título mundial?,1950,1954,1958,1962,C
+2,LIBERTADORES,Qual time venceu a Libertadores de 2019 com dois gols de Gabigol na final?,River Plate,Flamengo,Palmeiras,Boca Juniors,B
+2,COPA,Qual seleção venceu o Brasil por 7 a 1 na Copa de 2014?,Holanda,Argentina,Alemanha,Espanha,C
+2,BRASILEIRO,Qual clube Neymar defendeu antes de se transferir para o Barcelona?,Santos,São Paulo,Flamengo,Corinthians,A
+2,BRASILEIRO,Qual clube paulista tem o apelido de Peixe?,Santos,Palmeiras,Ponte Preta,Guarani,A
+2,COPA,Qual país venceu a Copa do Mundo de 2018?,Croácia,Bélgica,França,Inglaterra,C
+2,INTERNACIONAL,Qual clube espanhol é o maior campeão da Liga dos Campeões?,Barcelona,Real Madrid,Atlético de Madrid,Sevilla,B
+2,COPA,Qual seleção venceu a Copa de 2010 na África do Sul?,Holanda,Espanha,Alemanha,Uruguai,B
+2,LIBERTADORES,Qual foi o primeiro clube brasileiro campeão da Libertadores em 1962?,Santos,Cruzeiro,Flamengo,Palmeiras,A
+2,COPA,Quem vestiu a camisa 10 do Brasil no título da Copa de 2002?,Ronaldinho,Rivaldo,Kaká,Ronaldo,B
+2,COPA,Em qual estádio foi disputada a final da Copa de 2014?,Mineirão,Maracanã,Arena Corinthians,Mané Garrincha,B
+2,INTERNACIONAL,Qual clube inglês tem o apelido de Red Devils?,Liverpool,Arsenal,Manchester United,Chelsea,C
+2,COPA,Qual técnico comandou o Brasil no pentacampeonato em 2002?,Zagallo,Parreira,Felipão,Tite,C
+2,INTERNACIONAL,Qual jogador brasileiro ganhou a Bola de Ouro em 2007?,Ronaldinho,Kaká,Ronaldo,Rivaldo,B
+2,BRASILEIRO,Qual clube gaúcho é chamado de Tricolor Imortal?,Internacional,Juventude,Grêmio,Caxias,C
+2,INTERNACIONAL,Em qual cidade italiana fica a sede da Juventus?,Milão,Roma,Turim,Nápoles,C
+2,LIBERTADORES,Qual clube brasileiro venceu as Libertadores de 2020 e 2021?,Flamengo,Palmeiras,Santos,Atlético-MG,B
+2,INTERNACIONAL,Quantas substituições cada time pode fazer em jogos oficiais pela regra atual?,3,4,5,6,C
+2,COPA,Qual país sediou a Copa do Mundo de 2022?,Emirados Árabes,Arábia Saudita,Catar,Rússia,C
+# ---------- Nivel 3: Medio (15) ----------
+3,LIBERTADORES,Qual time venceu a Libertadores de 2024?,Atlético-MG,Botafogo,River Plate,Fluminense,B
+3,COPA,Quem marcou o gol do título da Alemanha na final da Copa de 2014?,Thomas Müller,Miroslav Klose,Mario Götze,André Schürrle,C
+3,COPA,Qual jogador é o maior artilheiro da história das Copas com 16 gols?,Ronaldo,Miroslav Klose,Thomas Müller,Messi,B
+3,COPA,Qual seleção venceu o Brasil na final da Copa de 1998?,Itália,França,Alemanha,Holanda,B
+3,LIBERTADORES,Contra qual time o Corinthians venceu a final da Libertadores de 2012?,Boca Juniors,River Plate,Santos,Nacional,A
+3,BRASILEIRO,Qual clube venceu o primeiro Brasileirão de pontos corridos em 2003?,Santos,Cruzeiro,São Paulo,Corinthians,B
+3,COPA,Qual seleção venceu a primeira Copa do Mundo em 1930?,Brasil,Argentina,Uruguai,Itália,C
+3,BRASILEIRO,Zico é o maior ídolo de qual clube brasileiro?,Vasco,Flamengo,Fluminense,Botafogo,B
+3,LIBERTADORES,Quem marcou o gol do título do Fluminense na final da Libertadores de 2023?,Germán Cano,Paulo Henrique Ganso,John Kennedy,Marcelo,C
+3,INTERNACIONAL,Qual clube surpreendeu o mundo ao vencer a Premier League 2015/16?,Leicester City,Tottenham,Everton,West Ham,A
+3,COPA,Quantos títulos de Copa do Mundo a Itália possui?,2,3,4,5,C
+3,COPA,Qual país sediou a Copa do Mundo de 1994 vencida pelo Brasil?,México,Itália,Estados Unidos,França,C
+3,BRASILEIRO,Garrincha é ídolo eterno de qual clube carioca?,Botafogo,Flamengo,Fluminense,Vasco,A
+3,COPA,Qual jogador brasileiro marcou os dois gols da final da Copa de 2002?,Rivaldo,Ronaldinho,Ronaldo,Edmílson,C
+3,BRASILEIRO,Qual clube é o maior campeão do Campeonato Brasileiro?,Flamengo,Santos,Palmeiras,Corinthians,C
+# ---------- Nivel 4: Dificil (15) ----------
+4,COPA,Qual foi o placar da final da Copa de 1958 entre Brasil e Suécia?,3 a 1,4 a 2,5 a 2,2 a 0,C
+4,LIBERTADORES,Qual clube venceu a primeira edição da Libertadores em 1960?,Peñarol,Santos,Independiente,Olimpia,A
+4,COPA,Qual jogador uruguaio marcou o gol do título no Maracanazo de 1950?,Schiaffino,Obdulio Varela,Ghiggia,Míguez,C
+4,LIBERTADORES,Qual clube é o maior campeão da história da Libertadores?,Boca Juniors,Peñarol,Independiente,River Plate,C
+4,COPA,Quem foi o artilheiro da Copa do Mundo de 1970?,Pelé,Jairzinho,Gerd Müller,Teófilo Cubillas,C
+4,INTERNACIONAL,Qual clube Pelé defendeu nos Estados Unidos?,LA Galaxy,New York Cosmos,Chicago Sting,Tampa Bay Rowdies,B
+4,INTERNACIONAL,Qual seleção surpreendeu ao vencer a Eurocopa de 2004?,Portugal,Grécia,República Tcheca,Holanda,B
+4,BRASILEIRO,Qual clube brasileiro venceu o Liverpool por 3 a 0 na final do Mundial de 1981?,Grêmio,Flamengo,São Paulo,Santos,B
+4,COPA,Qual técnico conduziu o Brasil ao tetracampeonato em 1994?,Zagallo,Telê Santana,Carlos Alberto Parreira,Sebastião Lazaroni,C
+4,LIBERTADORES,Em que ano o Grêmio conquistou sua primeira Libertadores?,1983,1995,2017,1976,A
+4,COPA,Quem marcou o chamado Gol do Século contra a Inglaterra na Copa de 1986?,Maradona,Valdano,Burruchaga,Kempes,A
+4,INTERNACIONAL,Qual clube ficou invicto em toda a Premier League 2003/04?,Manchester United,Chelsea,Arsenal,Liverpool,C
+4,LIBERTADORES,Qual é o apelido do estádio do Boca Juniors?,Monumental,La Bombonera,El Cilindro,Libertadores de América,B
+4,BRASILEIRO,Quem é o maior artilheiro da história do Campeonato Brasileiro?,Romário,Roberto Dinamite,Fred,Zico,B
+4,COPA,Qual seleção africana chegou às semifinais da Copa de 2022?,Senegal,Gana,Marrocos,Camarões,C
+# ---------- Nivel 5: Muito dificil (10) ----------
+5,LIBERTADORES,Contra qual clube o Santos venceu a final da Libertadores de 1963?,Peñarol,Boca Juniors,River Plate,Nacional,B
+5,COPA,Quem marcou o gol mais rápido da história das Copas aos 11 segundos em 2002?,Hakan Şükür,Clint Dempsey,Pelé,Vavá,A
+5,COPA,Qual seleção o Brasil venceu na final da Copa de 1962?,Tchecoslováquia,Hungria,Suécia,Iugoslávia,A
+5,COPA,Em qual estádio foi disputada a final da primeira Copa do Mundo em 1930?,Estádio Centenário,Maracanã,Wembley,Estádio Azteca,A
+5,LIBERTADORES,Qual clube colombiano venceu a Libertadores de 2004?,Atlético Nacional,Once Caldas,América de Cali,Millonarios,B
+5,COPA,Quantos gols Just Fontaine marcou na Copa de 1958 (recorde em uma única edição)?,11,12,13,14,C
+5,INTERNACIONAL,Qual clube venceu a primeira Copa dos Campeões da Europa em 1955/56?,Milan,Benfica,Real Madrid,Reims,C
+5,BRASILEIRO,Quem marcou o gol do título do São Paulo no Mundial de 2005 contra o Liverpool?,Amoroso,Mineiro,Aloísio,Rogério Ceni,B
+5,LIBERTADORES,Qual clube paraguaio venceu a Libertadores em 1979 e 1990 e 2002?,Cerro Porteño,Libertad,Olimpia,Guaraní,C
+5,BRASILEIRO,Em que ano foi disputada a Taça Brasil considerada o primeiro Campeonato Brasileiro?,1955,1959,1967,1971,B

@@ -1,0 +1,14 @@
+PROJECT_NAME           = "Futquiz"
+PROJECT_BRIEF          = "Jogo do Milhão com tema de futebol - FDCO2B UTFPR"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Brazilian
+INPUT                  = src README.md
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.c *.h
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO

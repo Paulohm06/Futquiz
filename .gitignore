@@ -1,0 +1,7 @@
+build/
+futquiz
+futquiz.exe
+docs/
+dados/perguntas.bin
+dados/*.tmp
+dados/exportacao.csv
