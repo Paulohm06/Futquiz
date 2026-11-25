@@ -7,6 +7,7 @@
 #include "menu.h"
 #include "interface.h"
 #include "arquivo.h"
+#include "jogo.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,6 +26,7 @@ enum {
     OPCAO_GERENCIAR,
     OPCAO_NAVEGAR,
     OPCAO_JOGAR,
+    OPCAO_RANKING,
     OPCAO_EXPORTAR,
     OPCAO_ESTATISTICAS
 };
@@ -596,39 +598,11 @@ static void mostrarEstatisticas(const BancoPerguntas *banco)
     interface_pausar();
 }
 
-/**
- * @brief Verifica se há perguntas suficientes para uma partida e mostra
- *        o aviso da parte criativa (a partida entra na segunda entrega).
- * @param banco Banco de perguntas.
- */
-static void jogarPartida(const BancoPerguntas *banco)
-{
-    int nivel;
-    int faltando = 0;
-    char mensagem[TAM_MENSAGEM];
-
-    interface_mostrarTitulo("Jogar partida");
-    for (nivel = 1; nivel <= NUM_NIVEIS; nivel++) {
-        if (banco_contarPorNivel(banco, (NivelDificuldade)nivel) <
-            pergunta_quantidadeNaPartida((NivelDificuldade)nivel)) {
-            snprintf(mensagem, sizeof(mensagem), "Faltam perguntas do nível %s para montar uma partida.",
-                     pergunta_nomeNivel((NivelDificuldade)nivel));
-            interface_mostrarErro(mensagem);
-            faltando = 1;
-        }
-    }
-    if (!faltando) {
-        interface_mostrarInfo("O banco tem perguntas suficientes para uma partida de 15 rodadas.");
-    }
-    interface_mostrarAviso("A partida (com VAR, Ajuda da Torcida e ranking) entra na parte criativa.");
-    interface_pausar();
-}
-
 /* ------------------------------------------------------------------ */
 /* Menu principal                                                      */
 /* ------------------------------------------------------------------ */
 
-void menu_executar(BancoPerguntas *banco)
+void menu_executar(BancoPerguntas *banco, Ranking *ranking)
 {
     int opcao;
 
@@ -636,16 +610,18 @@ void menu_executar(BancoPerguntas *banco)
         interface_mostrarTitulo("Menu principal");
         interface_imprimirOpcao(OPCAO_GERENCIAR, "Gerenciar perguntas");
         interface_imprimirOpcao(OPCAO_NAVEGAR, "Navegar por nível de dificuldade");
-        interface_imprimirOpcao(OPCAO_JOGAR, "Jogar partida " COR_CINZA "(em breve)" COR_RESET);
+        interface_imprimirOpcao(OPCAO_JOGAR, COR_VERDE "Jogar partida" COR_RESET);
+        interface_imprimirOpcao(OPCAO_RANKING, "Ranking dos craques");
         interface_imprimirOpcao(OPCAO_EXPORTAR, "Exportar perguntas para CSV");
         interface_imprimirOpcao(OPCAO_ESTATISTICAS, "Estatísticas do banco");
         interface_imprimirOpcao(OPCAO_SAIR, "Sair e salvar");
-        opcao = interface_lerInteiro("\n  Escolha: ", 0, 5);
+        opcao = interface_lerInteiro("\n  Escolha: ", 0, OPCAO_ESTATISTICAS);
 
         switch (opcao) {
         case OPCAO_GERENCIAR:    menuGerenciar(banco);       break;
         case OPCAO_NAVEGAR:      navegarPorNivel(banco);     break;
-        case OPCAO_JOGAR:        jogarPartida(banco);        break;
+        case OPCAO_JOGAR:        jogo_executarPartida(banco, ranking); break;
+        case OPCAO_RANKING:      jogo_mostrarRanking(ranking); break;
         case OPCAO_EXPORTAR:     exportarPerguntas(banco);   break;
         case OPCAO_ESTATISTICAS: mostrarEstatisticas(banco); break;
         default:                 break;

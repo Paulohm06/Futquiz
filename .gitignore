@@ -1,7 +1,9 @@
 build/
 futquiz
 futquiz.exe
+futquiz_gui
+futquiz_gui.exe
 docs/
-dados/perguntas.bin
+dados/*.bin
 dados/*.tmp
 dados/exportacao.csv

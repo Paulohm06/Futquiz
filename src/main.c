@@ -1,7 +1,8 @@
 /**
  * @file main.c
  * @brief Ponto de entrada do Futquiz: carrega os dados, executa o menu
- *        principal e salva tudo no arquivo binário ao sair.
+ *        principal e salva tudo no arquivo binário ao sair
+ *        (o ranking é salvo ao fim de cada partida).
  * @author Equipe Futquiz
  */
 
@@ -9,9 +10,11 @@
 #include "banco.h"
 #include "arquivo.h"
 #include "menu.h"
+#include "ranking.h"
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
  * @brief Carrega as perguntas: do binário se existir, senão do CSV inicial.
@@ -57,13 +60,16 @@ static void carregarDados(BancoPerguntas *banco)
 int main(void)
 {
     BancoPerguntas banco;
+    Ranking ranking;
     int salvou;
 
+    srand((unsigned int)time(NULL));
     interface_inicializar();
     banco_inicializar(&banco);
     carregarDados(&banco);
+    ranking_carregar(&ranking, CAMINHO_RANKING);
 
-    menu_executar(&banco);
+    menu_executar(&banco, &ranking);
 
     salvou = arquivo_salvarBinario(&banco, CAMINHO_BINARIO);
     if (salvou) {
