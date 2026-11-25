@@ -10,10 +10,10 @@ O projeto tem duas versões que usam o mesmo núcleo e os mesmos arquivos de dad
 ## Como compilar e executar
 
 ```bash
-make            # compila a versão de terminal
-make run        # compila e executa a versão de terminal
-make gui        # compila a versão gráfica (precisa da raylib)
-make run-gui    # compila e executa a versão gráfica
+make            # compila a versão de terminal e a gráfica (a gráfica precisa da raylib)
+make run        # compila e executa; o menu tem a opção "Abrir versão gráfica"
+make gui        # compila só a versão gráfica
+make run-gui    # compila e executa direto a versão gráfica
 make clean      # apaga objetos e executáveis
 make reset      # apaga dados/perguntas.bin e dados/ranking.bin
 make docs       # gera a documentação Doxygen em docs/

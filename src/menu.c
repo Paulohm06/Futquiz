@@ -20,6 +20,15 @@
 /** Tamanho dos buffers de mensagens. */
 #define TAM_MENSAGEM 160
 
+/* ---- Executável da versão gráfica (gerado pelo make) ---- */
+#ifdef _WIN32
+#define EXECUTAVEL_GUI "futquiz_gui.exe"
+#define COMANDO_GUI "futquiz_gui.exe"
+#else
+#define EXECUTAVEL_GUI "futquiz_gui"
+#define COMANDO_GUI "./futquiz_gui"
+#endif
+
 /* ---- Opções do menu principal ---- */
 enum {
     OPCAO_SAIR = 0,
@@ -28,7 +37,8 @@ enum {
     OPCAO_JOGAR,
     OPCAO_RANKING,
     OPCAO_EXPORTAR,
-    OPCAO_ESTATISTICAS
+    OPCAO_ESTATISTICAS,
+    OPCAO_GRAFICA
 };
 
 /* ---- Opções do menu de gerenciamento ---- */
@@ -598,6 +608,38 @@ static void mostrarEstatisticas(const BancoPerguntas *banco)
     interface_pausar();
 }
 
+/**
+ * @brief Abre a versão gráfica (raylib) e volta para este menu quando ela fecha.
+ *
+ * Antes de abrir, salva o banco no arquivo binário para que a versão gráfica
+ * já encontre as perguntas cadastradas agora. Ao voltar, recarrega o ranking,
+ * porque as partidas jogadas na janela gráfica também entram nele.
+ *
+ * @param banco Banco de perguntas.
+ * @param ranking Ranking dos jogadores.
+ */
+static void abrirVersaoGrafica(const BancoPerguntas *banco, Ranking *ranking)
+{
+    interface_mostrarTitulo("Versão gráfica");
+    if (!arquivo_existe(EXECUTAVEL_GUI)) {
+        interface_mostrarErro("A versão gráfica não foi compilada. Rode make (é preciso ter a raylib instalada).");
+        interface_pausar();
+        return;
+    }
+    if (!arquivo_salvarBinario(banco, CAMINHO_BINARIO)) {
+        interface_mostrarErro("Não foi possível salvar " CAMINHO_BINARIO " antes de abrir a versão gráfica.");
+        interface_pausar();
+        return;
+    }
+    interface_mostrarInfo("Abrindo a janela do jogo. Feche a janela para voltar a este menu.");
+    fflush(stdout);
+    if (system(COMANDO_GUI) != 0) {
+        interface_mostrarAviso("A versão gráfica terminou com erro.");
+    }
+    ranking_carregar(ranking, CAMINHO_RANKING);
+    interface_pausar();
+}
+
 /* ------------------------------------------------------------------ */
 /* Menu principal                                                      */
 /* ------------------------------------------------------------------ */
@@ -614,8 +656,9 @@ void menu_executar(BancoPerguntas *banco, Ranking *ranking)
         interface_imprimirOpcao(OPCAO_RANKING, "Ranking dos craques");
         interface_imprimirOpcao(OPCAO_EXPORTAR, "Exportar perguntas para CSV");
         interface_imprimirOpcao(OPCAO_ESTATISTICAS, "Estatísticas do banco");
+        interface_imprimirOpcao(OPCAO_GRAFICA, COR_VERDE "Abrir versão gráfica" COR_RESET);
         interface_imprimirOpcao(OPCAO_SAIR, "Sair e salvar");
-        opcao = interface_lerInteiro("\n  Escolha: ", 0, OPCAO_ESTATISTICAS);
+        opcao = interface_lerInteiro("\n  Escolha: ", 0, OPCAO_GRAFICA);
 
         switch (opcao) {
         case OPCAO_GERENCIAR:    menuGerenciar(banco);       break;
@@ -624,6 +667,7 @@ void menu_executar(BancoPerguntas *banco, Ranking *ranking)
         case OPCAO_RANKING:      jogo_mostrarRanking(ranking); break;
         case OPCAO_EXPORTAR:     exportarPerguntas(banco);   break;
         case OPCAO_ESTATISTICAS: mostrarEstatisticas(banco); break;
+        case OPCAO_GRAFICA:      abrirVersaoGrafica(banco, ranking); break;
         default:                 break;
         }
     } while (opcao != OPCAO_SAIR && !interface_entradaEncerrada());

@@ -1,8 +1,8 @@
 # Makefile do Futquiz
-#   make          -> compila a versão de terminal
-#   make run      -> compila e executa a versão de terminal
-#   make gui      -> compila a versão gráfica (precisa da raylib)
-#   make run-gui  -> compila e executa a versão gráfica
+#   make          -> compila a versão de terminal e a gráfica (a gráfica precisa da raylib)
+#   make run      -> compila e executa o programa (o menu tem a opção "Abrir versão gráfica")
+#   make gui      -> compila só a versão gráfica
+#   make run-gui  -> compila e executa direto a versão gráfica
 #   make clean    -> apaga objetos e executáveis
 #   make reset    -> apaga os binários de dados (perguntas e ranking)
 #   make docs     -> gera a documentação com Doxygen
@@ -62,9 +62,13 @@ else
     RESET_CMD = rm -f dados/perguntas.bin dados/ranking.bin
 endif
 
-.PHONY: all run gui run-gui clean reset docs
+.PHONY: all run gui gui-opcional run-gui clean reset docs
 
-all: $(EXEC)
+all: $(EXEC) gui-opcional
+
+# Tenta compilar a versão gráfica; sem a raylib, avisa e mantém só a de terminal.
+gui-opcional: $(EXEC)
+	@$(MAKE) --no-print-directory $(GUI_EXEC) || echo "AVISO: raylib nao encontrada. Apenas a versao de terminal foi compilada."
 
 $(EXEC): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
@@ -83,7 +87,7 @@ $(OBJ_DIR)/gui/%.o: $(GUI_DIR)/%.c | $(OBJ_DIR)
 $(OBJ_DIR):
 	$(MKDIR_OBJ)
 
-run: $(EXEC)
+run: all
 	$(RUN_CMD)
 
 run-gui: $(GUI_EXEC)
